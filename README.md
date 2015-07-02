@@ -1,5 +1,5 @@
 # augur-launcher
-Python source for the client launcher and installer.
+Python source for the Windows client launcher and installer.
 
 ### Building the binaries
 To get the installer, you can download it ~~here~~. <br><br>
