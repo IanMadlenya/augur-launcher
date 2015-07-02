@@ -9,4 +9,4 @@ cd C:\path\to\augur-launcher
 python C:\path\to\pyinstaller.py augur_launcher.spec
 python C:\path\to\pyinstaller.py "Augur Installer.spec"
 ```
-To update the version of geth used in the installer, simply copy the geth binary into the repo. You don't need to rebuild the launcher to change the geth version, just build ~Augur Installer.exe`
+To update the version of geth used in the installer, simply copy the geth binary into the repo. You don't need to rebuild the launcher to change the geth version, just build `Augur Installer.exe`
