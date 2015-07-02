@@ -25,4 +25,4 @@ exe = EXE(pyz,
           debug=False,
           strip=None,
           upx=True,
-          console=True , uac_admin=True, icon='C:\\Users\\Chris\\Desktop\\augur\\augur.ico')
+          console=True , uac_admin=True, icon=os.path.join(dirname, 'augur.ico'))
