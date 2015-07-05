@@ -8,7 +8,6 @@ from win32com.client import Dispatch
 
 LAUNCHER_PATH = "C:\\Program Files\\Augur"
 DATA_PATH = os.path.join(os.path.expanduser('~'), 'AppData', 'Roaming', "Augur")
-CHAIN_PATH = os.path.join(DATA_PATH, "chain")
 PASSFILE = os.path.join(DATA_PATH, "password.txt")
 
 if getattr(sys, 'frozen', False):
@@ -24,8 +23,7 @@ LAUNCHER_EXE = os.path.join(BASEDIR, 'augurlauncher.exe')
 def main():
     # first make all the appropriate directories
     print("Making directories...")
-    dirs = LAUNCHER_PATH, DATA_PATH, CHAIN_PATH
-    for d in dirs:
+    for d in LAUNCHER_PATH, DATA_PATH:
         print("Creating", d, end=" ", flush=True)
         os.mkdir(d)
         print("Success!")
@@ -50,7 +48,6 @@ def main():
     # create account on node
     p = subprocess.Popen([results[0],
                       "--password", PASSFILE,
-                      "--datadir", CHAIN_PATH,
                       "account", "new"])
     p.wait()
     print("Success!")
